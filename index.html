@@ -14,7 +14,25 @@
 		}
 
 		#chatWindow{
-			height:300px;
+			height:400px;
+			overflow-y: scroll;
+		}
+		::-webkit-scrollbar{
+    		width: 8px;
+		}
+		::-webkit-scrollbar-track{
+			border: 7px solid #9caeff;
+			box-shadow: inset 0 0 2.5px 2px rgba(222, 210, 245, 0.5);
+			border-radius: 18%;
+		}
+		::-webkit-scrollbar-thumb{
+			background: linear-gradient(45deg,#06dee1,#79ff6c);
+			border-radius: 10px;
+		}
+		.avdhesh{
+			margin-bottom: 1%;
+			margin-left: 90%;
+			opacity:.6;
 		}
 
 		#mainWrapper{
@@ -25,7 +43,8 @@
 			float:left;
 			border:1px #ccc solid;
 			border-radius: 10px;
-			background:#f4f4f4;
+			
+			background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcute%2520background%2F&psig=AOvVaw2rWprBWnCe-H1k0Z3WVDdN&ust=1587986482348000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjI7eL8hekCFQAAAAAdAAAAABAI");
 			padding:10px;
 		}
 
@@ -63,7 +82,7 @@
 			<div id="error"></div>
 			<form id="usernameForm">
 				<input type="text" size="35" id="username">
-				<input type="submit" value="Submit">
+				<input type="submit"  value="Submit">
 			</form>
 		</div>
 
@@ -73,6 +92,7 @@
 				<div id="chatWindow"></div>
 				<form id="messageForm">
 					<input type="text" size="35" id="message" placeholder="Say Something...">
+					
 					<input type="submit" value="Submit">
 				</form>
 			</div>
@@ -107,7 +127,7 @@
 					}
 				});
 			});
-
+			
 			socket.on('usernames', function(data){
 				var html = '';
 				for(i = 0;i < data.length;i++){
@@ -128,5 +148,8 @@
 
 		});
 		</script>
+		<div class="avdhesh">
+		Made with love By: Avdhesh
+		</div>
 </body>
 </html>
